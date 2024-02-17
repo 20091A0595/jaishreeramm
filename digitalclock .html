@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+            .a1{
+                border:1px solid black;
+                width:300px;
+                height: 100px;
+                align-items: center;
+                font-size:larger;
+                color:blue;
+            }
+        </style>
+    </head>
+        <body>
+            <center>
+            <div class="a1">
+                Digital clock
+        <p id="demo1"></p>
+        </div>
+    </center>
+        <script> 
+            function clock() {
+                let time=new Date();
+                var hrs=time.getHours();
+                var min=time.getMinutes();
+                var sec=time.getSeconds();
+                var b;
+                if(hrs>=12){
+                    
+                 b="PM";
+                }
+                else{
+                 
+                      b="AM";
+                }
+                let bb=hrs+":"+min+":"+sec+":"+b;
+                
+                document.getElementById("demo1").innerHTML=bb;
+                
+            }
+            setInterval(clock,1000);
+            clock();
+        </script>
+    </body>
+   
+</html>
